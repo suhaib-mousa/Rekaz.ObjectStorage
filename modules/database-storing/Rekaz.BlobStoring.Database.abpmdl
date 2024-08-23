@@ -1,0 +1,54 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "Rekaz.BlobStoring.Database.Domain.Shared": {
+      "path": "src/Rekaz.BlobStoring.Database.Domain.Shared/Rekaz.BlobStoring.Database.Domain.Shared.abppkg",
+      "folder": "src"
+    },
+    "Rekaz.BlobStoring.Database.Domain": {
+      "path": "src/Rekaz.BlobStoring.Database.Domain/Rekaz.BlobStoring.Database.Domain.abppkg",
+      "folder": "src"
+    },
+    "Rekaz.BlobStoring.Database.Application.Contracts": {
+      "path": "src/Rekaz.BlobStoring.Database.Application.Contracts/Rekaz.BlobStoring.Database.Application.Contracts.abppkg",
+      "folder": "src"
+    },
+    "Rekaz.BlobStoring.Database.Application": {
+      "path": "src/Rekaz.BlobStoring.Database.Application/Rekaz.BlobStoring.Database.Application.abppkg",
+      "folder": "src"
+    },
+    "Rekaz.BlobStoring.Database.EntityFrameworkCore": {
+      "path": "src/Rekaz.BlobStoring.Database.EntityFrameworkCore/Rekaz.BlobStoring.Database.EntityFrameworkCore.abppkg",
+      "folder": "src"
+    },
+    "Rekaz.BlobStoring.Database.HttpApi": {
+      "path": "src/Rekaz.BlobStoring.Database.HttpApi/Rekaz.BlobStoring.Database.HttpApi.abppkg",
+      "folder": "src"
+    },
+    "Rekaz.BlobStoring.Database.HttpApi.Client": {
+      "path": "src/Rekaz.BlobStoring.Database.HttpApi.Client/Rekaz.BlobStoring.Database.HttpApi.Client.abppkg",
+      "folder": "src"
+    },
+    "Rekaz.BlobStoring.Database.TestBase": {
+      "path": "test/Rekaz.BlobStoring.Database.TestBase/Rekaz.BlobStoring.Database.TestBase.abppkg",
+      "folder": "test"
+    },
+    "Rekaz.BlobStoring.Database.EntityFrameworkCore.Tests": {
+      "path": "test/Rekaz.BlobStoring.Database.EntityFrameworkCore.Tests/Rekaz.BlobStoring.Database.EntityFrameworkCore.Tests.abppkg",
+      "folder": "test"
+    },
+    "Rekaz.BlobStoring.Database.Domain.Tests": {
+      "path": "test/Rekaz.BlobStoring.Database.Domain.Tests/Rekaz.BlobStoring.Database.Domain.Tests.abppkg",
+      "folder": "test"
+    },
+    "Rekaz.BlobStoring.Database.Application.Tests": {
+      "path": "test/Rekaz.BlobStoring.Database.Application.Tests/Rekaz.BlobStoring.Database.Application.Tests.abppkg",
+      "folder": "test"
+    }
+  }
+}

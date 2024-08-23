@@ -1,0 +1,10 @@
+﻿{
+  "applications": {
+    "Rekaz.ObjectStorage.Web": {
+      "type": "dotnet-project",
+      "launchUrl": "https://localhost:44365",
+      "path": "../../../src/Rekaz.ObjectStorage.Web/Rekaz.ObjectStorage.Web.csproj",
+      "kubernetesService": ".*-web$"
+    }
+  }
+}

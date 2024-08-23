@@ -1,0 +1,89 @@
+{
+  "template": "app",
+  "imports": {
+    "Volo.Abp.Account": {
+      "version": "8.2.1",
+      "isInstalled": true
+    },
+    "Volo.Abp.OpenIddict": {
+      "version": "8.2.1",
+      "isInstalled": true
+    },
+    "Volo.Abp.Identity": {
+      "version": "8.2.1",
+      "isInstalled": true
+    },
+    "Volo.Abp.TenantManagement": {
+      "version": "8.2.1",
+      "isInstalled": true
+    }
+  },
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "Rekaz.ObjectStorage.Application": {
+      "path": "src/Rekaz.ObjectStorage.Application/Rekaz.ObjectStorage.Application.abppkg",
+      "folder": "src"
+    },
+    "Rekaz.ObjectStorage.Application.Tests": {
+      "path": "test/Rekaz.ObjectStorage.Application.Tests/Rekaz.ObjectStorage.Application.Tests.abppkg",
+      "folder": "test"
+    },
+    "Rekaz.ObjectStorage.Domain.Shared": {
+      "path": "src/Rekaz.ObjectStorage.Domain.Shared/Rekaz.ObjectStorage.Domain.Shared.abppkg",
+      "folder": "src"
+    },
+    "Rekaz.ObjectStorage.Application.Contracts": {
+      "path": "src/Rekaz.ObjectStorage.Application.Contracts/Rekaz.ObjectStorage.Application.Contracts.abppkg",
+      "folder": "src"
+    },
+    "Rekaz.ObjectStorage.HttpApi": {
+      "path": "src/Rekaz.ObjectStorage.HttpApi/Rekaz.ObjectStorage.HttpApi.abppkg",
+      "folder": "src"
+    },
+    "Rekaz.ObjectStorage.HttpApi.Client": {
+      "path": "src/Rekaz.ObjectStorage.HttpApi.Client/Rekaz.ObjectStorage.HttpApi.Client.abppkg",
+      "folder": "src"
+    },
+    "Rekaz.ObjectStorage.Web": {
+      "path": "src/Rekaz.ObjectStorage.Web/Rekaz.ObjectStorage.Web.abppkg",
+      "folder": "src"
+    },
+    "Rekaz.ObjectStorage.Web.Tests": {
+      "path": "test/Rekaz.ObjectStorage.Web.Tests/Rekaz.ObjectStorage.Web.Tests.abppkg",
+      "folder": "test"
+    },
+    "Rekaz.ObjectStorage.EntityFrameworkCore.Tests": {
+      "path": "test/Rekaz.ObjectStorage.EntityFrameworkCore.Tests/Rekaz.ObjectStorage.EntityFrameworkCore.Tests.abppkg",
+      "folder": "test"
+    },
+    "Rekaz.ObjectStorage.EntityFrameworkCore": {
+      "path": "src/Rekaz.ObjectStorage.EntityFrameworkCore/Rekaz.ObjectStorage.EntityFrameworkCore.abppkg",
+      "folder": "src"
+    },
+    "Rekaz.ObjectStorage.TestBase": {
+      "path": "test/Rekaz.ObjectStorage.TestBase/Rekaz.ObjectStorage.TestBase.abppkg",
+      "folder": "test"
+    },
+    "Rekaz.ObjectStorage.Domain.Tests": {
+      "path": "test/Rekaz.ObjectStorage.Domain.Tests/Rekaz.ObjectStorage.Domain.Tests.abppkg",
+      "folder": "test"
+    },
+    "Rekaz.ObjectStorage.HttpApi.Client.ConsoleTestApp": {
+      "path": "test/Rekaz.ObjectStorage.HttpApi.Client.ConsoleTestApp/Rekaz.ObjectStorage.HttpApi.Client.ConsoleTestApp.abppkg",
+      "folder": "test"
+    },
+    "Rekaz.ObjectStorage.DbMigrator": {
+      "path": "src/Rekaz.ObjectStorage.DbMigrator/Rekaz.ObjectStorage.DbMigrator.abppkg",
+      "folder": "src"
+    },
+    "Rekaz.ObjectStorage.Domain": {
+      "path": "src/Rekaz.ObjectStorage.Domain/Rekaz.ObjectStorage.Domain.abppkg",
+      "folder": "src"
+    }
+  }
+}
