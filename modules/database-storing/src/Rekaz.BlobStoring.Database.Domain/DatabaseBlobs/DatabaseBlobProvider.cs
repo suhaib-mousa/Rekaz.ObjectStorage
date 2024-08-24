@@ -9,12 +9,10 @@ namespace Rekaz.BlobStoring.Database.DatabaseBlobs;
 public class DatabaseBlobProvider : BlobProviderBase, ITransientDependency
 {
     private readonly IDatabaseBlobRepository _databaseBlobRepository;
-    private readonly IGuidGenerator _guidGenerator;
 
     public DatabaseBlobProvider(IDatabaseBlobRepository databaseBlobRepository, IGuidGenerator guidGenerator)
     {
         _databaseBlobRepository = databaseBlobRepository;
-        _guidGenerator = guidGenerator;
     }
 
 
