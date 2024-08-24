@@ -20,6 +20,7 @@ using Volo.Abp.TenantManagement;
 namespace Rekaz.ObjectStorage;
 
 [DependsOn(
+    //typeof(DatabaseDomainModule),
     typeof(ObjectStorageDomainSharedModule),
     typeof(AbpAuditLoggingDomainModule),
     typeof(AbpCachingModule),
@@ -32,7 +33,6 @@ namespace Rekaz.ObjectStorage;
     typeof(AbpIdentityDomainModule),
     typeof(AbpOpenIddictDomainModule),
     typeof(AbpTenantManagementDomainModule)
-    //typeof(DatabaseDomainModule)
     )]
 public class ObjectStorageDomainModule : AbpModule
 {

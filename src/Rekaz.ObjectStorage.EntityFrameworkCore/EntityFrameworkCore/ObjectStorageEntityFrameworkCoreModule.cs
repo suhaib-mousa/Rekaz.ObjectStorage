@@ -15,6 +15,7 @@ using Volo.Abp.TenantManagement.EntityFrameworkCore;
 namespace Rekaz.ObjectStorage.EntityFrameworkCore;
 
 [DependsOn(
+    //typeof(DatabaseEntityFrameworkCoreModule),
     typeof(ObjectStorageDomainModule),
     typeof(AbpPermissionManagementEntityFrameworkCoreModule),
     typeof(AbpSettingManagementEntityFrameworkCoreModule),
@@ -25,7 +26,6 @@ namespace Rekaz.ObjectStorage.EntityFrameworkCore;
     typeof(AbpIdentityEntityFrameworkCoreModule),
     typeof(AbpOpenIddictEntityFrameworkCoreModule),
     typeof(AbpTenantManagementEntityFrameworkCoreModule)
-    //typeof(DatabaseEntityFrameworkCoreModule)
     )]
 public class ObjectStorageEntityFrameworkCoreModule : AbpModule
 {

@@ -5,8 +5,6 @@ namespace Rekaz.BlobStoring;
 
 public class BlobStoringConfiguration
 {
-    public Type? ProviderType { get; set; }
-
     [NotNull] private readonly Dictionary<string, object?> _configurationProperties;
     public BlobStoringConfiguration()
     {

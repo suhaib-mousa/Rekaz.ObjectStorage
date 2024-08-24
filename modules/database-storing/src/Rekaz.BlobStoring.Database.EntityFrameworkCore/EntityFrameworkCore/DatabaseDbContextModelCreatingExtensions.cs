@@ -13,10 +13,10 @@ public static class DatabaseDbContextModelCreatingExtensions
         Check.NotNull(builder, nameof(builder));
 
 
-        builder.Entity<DatabaseBlob>(b =>
-        {
-            b.ToTable(DatabaseDbProperties.DbTablePrefix + "Blobs", DatabaseDbProperties.DbSchema);
-            b.ConfigureByConvention();
-        });
+        //builder.Entity<DatabaseBlob>(b =>
+        //{
+        //    b.ToTable(DatabaseDbProperties.DbTablePrefix + "Blobs", DatabaseDbProperties.DbSchema);
+        //    b.ConfigureByConvention();
+        //});
     }
 }

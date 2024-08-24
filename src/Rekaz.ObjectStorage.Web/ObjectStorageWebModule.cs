@@ -52,6 +52,7 @@ using Rekaz.BlobStoring.LocalStorage;
 using Volo.Abp.Timing;
 using Rekaz.BlobStoring.Database.DatabaseBlobs;
 using Rekaz.BlobStoring.Aws;
+using Rekaz.BlobStoring.FTP;
 
 namespace Rekaz.ObjectStorage.Web;
 
@@ -137,7 +138,7 @@ public class ObjectStorageWebModule : AbpModule
         ConfigureAutoMapper();
         ConfigureVirtualFileSystem(hostingEnvironment);
         ConfigureNavigationServices();
-        ConfigureAutoApiControllers();
+        //ConfigureAutoApiControllers();
         ConfigureSwaggerServices(context.Services);
 
         Configure<PermissionManagementOptions>(options =>
@@ -150,27 +151,40 @@ public class ObjectStorageWebModule : AbpModule
     {
         Configure<BlobStoringOptions>(options =>
         {
-            options.Configuration.UseAws(aws =>
+            options.Configuration.UseLocalStorage(f =>
             {
-                aws.AccessKeyId = "AKIATWBJ2MTPEKLO4SIF";
-                aws.SecretAccessKey = "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";
-                aws.Endpoint = "https://rekaz-storage.s3.eu-north-1.amazonaws.com";
-                aws.BucketName = "rekaz-storage";
-                aws.Region = "eu-north-1";
+                f.BasePath = Path.Combine(Directory.GetCurrentDirectory(), "Documents");
             });
         });
+
+        //Configure<BlobStoringOptions>(options =>
+        //{
+        //    options.Configuration.UseAws(aws =>
+        //    {
+        //        aws.AccessKeyId = "YOUR_ACCESS_KEY";
+        //        aws.SecretAccessKey = "YOUR_SECRET_KEY";
+        //        aws.BucketName = "YOUR_BUCKET";
+        //        aws.Region = "YOUR_REGION";
+        //        aws.Container = "YOUR_CONTAINER";
+        //    });
+        //});
+
         //Configure<BlobStoringOptions>(options =>
         //{
         //    options.Configuration.UseDatabase();
         //});
+
         //Configure<BlobStoringOptions>(options =>
         //{
-        //    options.Configuration.UseFileSystem(f =>
+        //    options.Configuration.UseFTP(f =>
         //    {
-        //        f.BasePath = Path.Combine(Directory.GetCurrentDirectory(), "Documents");
+        //        f.ServerAddress = "YOUR_SERVER_ADDERSS";
+        //        f.Port = 21; // YOUR_PORT
+        //        f.Username = "YOUR_USERNAME";
+        //        f.Password = "YOUR_PASSWORD";
+        //        f.RootPath = @"YOUR_ROOT_PATH";
         //    });
         //});
-
     }
 
     private X509Certificate2 GetSigningCertificate(IWebHostEnvironment hostingEnv)

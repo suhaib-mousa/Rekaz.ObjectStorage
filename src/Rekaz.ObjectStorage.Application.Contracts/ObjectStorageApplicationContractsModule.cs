@@ -8,20 +8,22 @@ using Volo.Abp.TenantManagement;
 using Rekaz.BlobStoring;
 using Rekaz.BlobStoring.LocalStorage;
 using Rekaz.BlobStoring.Aws;
+using Rekaz.BlobStoring.FTP;
 
 namespace Rekaz.ObjectStorage;
 
 [DependsOn(
+    typeof(BlobStoringLocalStorageModule),
+    //typeof(BlobStoringAwsModule),
+    //typeof(BlobStoringFTPModule),
+    typeof(BlobStoringModule),
     typeof(ObjectStorageDomainSharedModule),
     typeof(AbpFeatureManagementApplicationContractsModule),
     typeof(AbpSettingManagementApplicationContractsModule),
     typeof(AbpIdentityApplicationContractsModule),
     typeof(AbpAccountApplicationContractsModule),
     typeof(AbpTenantManagementApplicationContractsModule),
-    typeof(AbpPermissionManagementApplicationContractsModule),
-    //typeof(BlobStoringLocalStorageModule),
-    typeof(BlobStoringAwsModule),
-    typeof(BlobStoringModule)
+    typeof(AbpPermissionManagementApplicationContractsModule)
 )]
 public class ObjectStorageApplicationContractsModule : AbpModule
 {

@@ -55,6 +55,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rekaz.BlobStoring.Database.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rekaz.BlobStoring.Aws", "Infra\Rekaz.BlobStoring.Aws\Rekaz.BlobStoring.Aws.csproj", "{E756B9C3-54AC-4A1B-86E1-88C722B2818D}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rekaz.BlobStoring.FTP", "Infra\Rekaz.BlobStoring.FTP\Rekaz.BlobStoring.FTP.csproj", "{4CE1FC02-DA44-48A7-8CA0-C97FE6DCEABA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -145,6 +147,10 @@ Global
 		{E756B9C3-54AC-4A1B-86E1-88C722B2818D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E756B9C3-54AC-4A1B-86E1-88C722B2818D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E756B9C3-54AC-4A1B-86E1-88C722B2818D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CE1FC02-DA44-48A7-8CA0-C97FE6DCEABA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CE1FC02-DA44-48A7-8CA0-C97FE6DCEABA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CE1FC02-DA44-48A7-8CA0-C97FE6DCEABA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CE1FC02-DA44-48A7-8CA0-C97FE6DCEABA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -172,6 +178,7 @@ Global
 		{064E6CD4-FED4-45E7-A85A-67930EF2C576} = {D9FB6692-CB77-4E30-BFB3-832CDFBFF465}
 		{FF9A9425-3E57-4A9D-A8FB-80897F2EB08A} = {D9FB6692-CB77-4E30-BFB3-832CDFBFF465}
 		{E756B9C3-54AC-4A1B-86E1-88C722B2818D} = {85494E06-4741-4DD0-B54B-EA020F645FB0}
+		{4CE1FC02-DA44-48A7-8CA0-C97FE6DCEABA} = {85494E06-4741-4DD0-B54B-EA020F645FB0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {28315BFD-90E7-4E14-A2EA-F3D23AF4126F}

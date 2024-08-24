@@ -12,8 +12,6 @@ public static class AwsBlobProviderConfigurationExtensions
         this BlobStoringConfiguration configuration,
         Action<AwsBlobProviderConfiguration> fileSystemConfigureAction)
     {
-        configuration.ProviderType = typeof(AwsBlobProvider);
-
         fileSystemConfigureAction(new AwsBlobProviderConfiguration(configuration));
 
         return configuration;

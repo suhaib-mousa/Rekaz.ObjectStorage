@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Infra\Rekaz.BlobStoring.Aws\Rekaz.BlobStoring.Aws.csproj" />
+    <ProjectReference Include="..\..\Infra\Rekaz.BlobStoring.FTP\Rekaz.BlobStoring.FTP.csproj" />
     <ProjectReference Include="..\..\Infra\Rekaz.BlobStoring\Rekaz.BlobStoring.csproj" />
     <ProjectReference Include="..\..\Infra\Rekaz.BlobStoring.LocalStorage\Rekaz.BlobStoring.LocalStorage.csproj" />
     <ProjectReference Include="..\Rekaz.ObjectStorage.Domain.Shared\Rekaz.ObjectStorage.Domain.Shared.csproj" />

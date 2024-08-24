@@ -107,9 +107,30 @@ public class OpenIddictDataSeedContributor : IDataSeedContributor, ITransientDep
             );
         }
 
-        
-        
 
+
+
+        // Rekaz Client
+        var rekazClientId = configurationSection["Rekaz:ClientId"];
+        if (!rekazClientId.IsNullOrWhiteSpace())
+        {
+            var webClientRootUrl = configurationSection["Rekaz:RootUrl"]!.EnsureEndsWith('/');
+            var swaggerRootUrl = configurationSection["Rekaz:RootUrl"]?.TrimEnd('/');
+
+            await CreateApplicationAsync(
+                name: rekazClientId!,
+                type: OpenIddictConstants.ClientTypes.Confidential, 
+                consentType: OpenIddictConstants.ConsentTypes.Implicit,
+                displayName: "Rekaz",
+                secret: configurationSection["Rekaz:ClientSecret"] ?? "1q2w3e*",
+                grantTypes: new List<string> { OpenIddictConstants.GrantTypes.AuthorizationCode, OpenIddictConstants.GrantTypes.Password, OpenIddictConstants.GrantTypes.RefreshToken },
+                scopes: commonScopes,
+                redirectUri: $"{webClientRootUrl}signin-oidc",
+                postLogoutRedirectUri: $"{webClientRootUrl}signout-callback-oidc",
+                clientUri: webClientRootUrl,
+                logoUri: "/images/clients/aspnetcore.svg"
+            );
+        }
 
 
 

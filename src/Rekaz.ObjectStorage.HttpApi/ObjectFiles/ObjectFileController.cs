@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Rekaz.BlobStoring;
 using System;
@@ -9,6 +10,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 namespace Rekaz.ObjectStorage.ObjectFiles;
 
 [ApiController]
+[Authorize]
 [Route("v1")]
 public class ObjectFileController : AbpController
 {

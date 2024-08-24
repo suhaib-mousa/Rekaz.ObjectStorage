@@ -17,6 +17,7 @@ using Rekaz.BlobStoring.Database;
 namespace Rekaz.ObjectStorage;
 
 [DependsOn(
+    //typeof(DatabaseDomainSharedModule),
     typeof(AbpAuditLoggingDomainSharedModule),
     typeof(AbpBackgroundJobsDomainSharedModule),
     typeof(AbpFeatureManagementDomainSharedModule),
@@ -25,7 +26,6 @@ namespace Rekaz.ObjectStorage;
     typeof(AbpIdentityDomainSharedModule),
     typeof(AbpOpenIddictDomainSharedModule),
     typeof(AbpTenantManagementDomainSharedModule)
-    //typeof(DatabaseDomainSharedModule)
     )]
 public class ObjectStorageDomainSharedModule : AbpModule
 {

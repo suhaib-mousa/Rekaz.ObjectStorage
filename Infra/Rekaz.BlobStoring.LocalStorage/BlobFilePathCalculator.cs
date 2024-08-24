@@ -6,7 +6,7 @@ public class BlobFilePathCalculator : IBlobFilePathCalculator, ITransientDepende
 {
     public virtual string Calculate(BlobProviderArgs args)
     {
-        var fileSystemConfiguration = args.Configuration.GetFileSystemConfiguration();
+        var fileSystemConfiguration = args.Configuration.GetLocalStorageConfiguration();
         var blobPath = fileSystemConfiguration.BasePath;
 
         blobPath = Path.Combine(blobPath, args.BlobName);

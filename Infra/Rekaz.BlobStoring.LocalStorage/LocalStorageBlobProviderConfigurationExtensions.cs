@@ -2,20 +2,17 @@
 
 public static class LocalStorageBlobProviderConfigurationExtensions
 {
-    public static LocalStorageBlobProviderConfiguration GetFileSystemConfiguration(
+    public static LocalStorageBlobProviderConfiguration GetLocalStorageConfiguration(
         this BlobStoringConfiguration configuration)
     {
         return new LocalStorageBlobProviderConfiguration(configuration);
     }
 
-    public static BlobStoringConfiguration UseFileSystem(
+    public static void UseLocalStorage(
         this BlobStoringConfiguration configuration,
-        Action<LocalStorageBlobProviderConfiguration> fileSystemConfigureAction)
+        Action<LocalStorageBlobProviderConfiguration> localStorageConfigureAction)
     {
-        configuration.ProviderType = typeof(LocalStorageBlobProvider);
 
-        fileSystemConfigureAction(new LocalStorageBlobProviderConfiguration(configuration));
-
-        return configuration;
+        localStorageConfigureAction(new LocalStorageBlobProviderConfiguration(configuration));
     }
 }

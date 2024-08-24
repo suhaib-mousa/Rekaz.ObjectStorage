@@ -1,4 +1,5 @@
-﻿using Rekaz.BlobStoring;
+﻿using Microsoft.AspNetCore.Authorization;
+using Rekaz.BlobStoring;
 using System;
 using System.IO;
 using System.Threading.Tasks;
@@ -9,6 +10,7 @@ using Volo.Abp.Domain.Repositories;
 namespace Rekaz.ObjectStorage.ObjectFiles;
 
 [RemoteService(false)]
+[Authorize]
 public class ObjectFileAppService : ApplicationService, IObjectFileAppService
 {
     private readonly IRepository<ObjectFile, Guid> _repository;

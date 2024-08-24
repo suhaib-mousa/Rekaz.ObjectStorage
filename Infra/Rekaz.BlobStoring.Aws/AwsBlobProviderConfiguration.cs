@@ -14,12 +14,6 @@ public class AwsBlobProviderConfiguration
         set => _configuration.AddOrUpdateConfiguration(AwsBlobProviderConfigurationNames.SecretAccessKey, value);
     }
 
-    public string? Endpoint
-    {
-        get => _configuration.GetConfiguration<string>(AwsBlobProviderConfigurationNames.Endpoint);
-        set => _configuration.AddOrUpdateConfiguration(AwsBlobProviderConfigurationNames.Endpoint, value);
-    }
-
     public string? BucketName
     {
         get => _configuration.GetConfiguration<string>(AwsBlobProviderConfigurationNames.BucketName);
@@ -31,6 +25,12 @@ public class AwsBlobProviderConfiguration
     {
         get => _configuration.GetConfiguration<string>(AwsBlobProviderConfigurationNames.Region);
         set => _configuration.AddOrUpdateConfiguration(AwsBlobProviderConfigurationNames.Region, value);
+    }
+
+    public string? Container
+    {
+        get => _configuration.GetConfiguration<string>(AwsBlobProviderConfigurationNames.Container);
+        set => _configuration.AddOrUpdateConfiguration(AwsBlobProviderConfigurationNames.Container, value);
     }
 
     private readonly BlobStoringConfiguration _configuration;
